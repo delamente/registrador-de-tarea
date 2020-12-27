@@ -8,11 +8,11 @@ if (isset($_POST['save_task'])) {
   $query = "INSERT INTO task(title, description) VALUES ('$title', '$description')";
   $result = mysqli_query($conn, $query);
   if(!$result) {
-    die("Query Failed.");
+    die("Consulta ha fallado.");
   }
 
-  $_SESSION['message'] = 'Task Saved Successfully';
-  $_SESSION['message_type'] = 'success';
+  $_SESSION['message'] = 'tarea guardada correctamente';
+  $_SESSION['message_type'] = 'guardado con exito';
   header('Location: index.php');
 
 }
